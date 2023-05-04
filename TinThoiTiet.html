@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .header {
+            width: auto;
+            height: 80px;
+            border: 2px solid green;
+            background-color: lightgreen;
+        }
+        
+        .header ul {
+            list-style: none;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+            width: 150px;
+            color: cadetblue;
+            float: left;
+        }
+        
+        .header ul li {
+            display: box;
+            position: relative;
+            background-color: lawngreen;
+            border: 2px solid green;
+        }
+        
+        .header li ul {
+            display: none;
+        }
+        
+        .header ul li a {
+            display: block;
+            padding: 1em;
+            text-decoration: none;
+            color: #fff;
+            white-space: nowrap;
+        }
+        
+        .header ul li a:hover {
+            background: greenyellow;
+        }
+        
+        .header li:hover>ul {
+            display: block;
+            position: absolute;
+        }
+        
+        .header li:hover li {
+            float: none;
+        }
+        
+        .header li:hover ul li {
+            background: lawngreen;
+        }
+        
+        .header li:hover a {
+            background-color: lawngreen;
+        }
+        
+        .header li:hover a:hover {
+            background-color: greenyellow;
+        }
+        
+        .header ul ul {
+            margin-left: -12px;
+            top: 45px;
+            width: 150px;
+            height: auto;
+        }
+        
+        .header #Searchbar {
+            padding: 10px;
+            margin: 20px;
+            float: right;
+        }
+        
+        .bodyleft {
+            width: 65%;
+            height: 1700px;
+            float: left;
+            border: 2px solid green;
+        }
+        
+        .bodyright {
+            width: 35%;
+            height: 1700px;
+            float: right;
+            border: 2px solid green;
+        }
+        
+        .containerforimg1 {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .img1 {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/7ad7638195c37c9d25d2.webp);
+            transition: 0.7s;
+        }
+        
+        .img1:hover {
+            transform: scale(1.05);
+        }
+        
+        .img1 .texthover a:hover {
+            transform: scale(1.05);
+        }
+        
+        .texthover {
+            padding: 5px;
+            margin: auto;
+            font-size: 30px;
+            font-family: Arial;
+        }
+        
+        .texthover a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .texthover a:hover {
+            color: lightblue
+        }
+        
+        .src1 {
+            width: 100%;
+            height: 30px;
+        }
+        
+        .src1 a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        
+        .src1 a:hover {
+            color: lightblue;
+        }
+        
+        .img2 {
+            width: 250px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/5c149b396d7b8425dd6a\ \(1\).webp);
+            transition: 0.7s;
+            float: left;
+            border: 1px solid green;
+            overflow: hidden;
+        }
+        
+        .img2:hover {
+            transform: scale(1.05);
+        }
+        
+        .textbox1 a:hover {
+            color: lightblue;
+        }
+        
+        .src2 {
+            width: 700px;
+            height: 30px;
+            float: left;
+        }
+        
+        .src2 a {
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+        
+        .src2 a:hover {
+            color: lightblue;
+        }
+        
+        .img3 {
+            width: 250px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/a9718c8471c69898c1d7.webp);
+            transition: 0.7s;
+            float: left;
+            border: 1px solid green;
+        }
+        
+        .img3:hover {
+            transform: scale(1.05);
+        }
+        
+        .img4 {
+            width: 250px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/12767d598b1b62453b0a.webp);
+            transition: 0.7s;
+            float: left;
+            border: 1px solid green;
+        }
+        
+        .img4:hover {
+            transform: scale(1.05);
+        }
+        
+        .img5 {
+            width: 250px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/cháy\ cây\ xăng.webp);
+            transition: 0.7s;
+            float: left;
+            border: 1px solid green;
+        }
+        
+        .img5:hover {
+            transform: scale(1.05);
+        }
+        
+        .img6 {
+            width: 250px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/vanh-dai-4\ qua\ ha`\ noi.webp);
+            transition: 0.7s;
+            float: left;
+            border: 1px solid green;
+        }
+        
+        .img6:hover {
+            transform: scale(1.05);
+        }
+        
+        .img7 {
+            width: 250px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(image/thời\ tiết\ hà\ nội.webp);
+            transition: 0.7s;
+            float: left;
+            border: 1px solid green;
+        }
+        
+        .img7:hover {
+            transform: scale(1.05);
+        }
+        
+        .slider {
+            width: auto;
+            height: 290px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .slides {
+            width: 0px;
+            height: 200px;
+            display: flex;
+        }
+        
+        .slides input {
+            display: none;
+        }
+        
+        .slide {
+            width: 40%;
+            transition: 2s;
+        }
+        
+        .slide img {
+            width: 1000px;
+            height: 300px;
+        }
+        
+        .navigation-manual {
+            position: absolute;
+            width: 600px;
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+            z-index: 4;
+        }
+        
+        .manual-btn {
+            border: 2px solid greenyellow;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.7s;
+            z-index: 4;
+        }
+        
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        .manual-btn:hover {
+            background-color: greenyellow;
+        }
+        
+        #radio1:checked~.first {
+            z-index: 3;
+        }
+        
+        #radio2:checked~.second {
+            z-index: 2;
+        }
+        
+        #radio3:checked~.last {
+            z-index: 1;
+        }
+        
+        .navigation-auto {
+            position: absolute;
+            width: 600px;
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+            z-index: 4;
+        }
+        
+        .navigation-auto div {
+            border: 2px solid greenyellow;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.7s;
+            z-index: 4;
+        }
+        
+        .navigation-auto div:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        #radio1:checked~.navigation-auto .auto-btn1 {
+            background-color: greenyellow;
+        }
+        
+        #radio2:checked~.navigation-auto .auto-btn2 {
+            background-color: greenyellow;
+        }
+        
+        #radio3:checked~.navigation-auto .auto-btn3 {
+            background-color: greenyellow;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Tin Tức</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.6/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3) {
+                counter = 1;
+            }
+        }, 3000);
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="image/logo-hufi-inkythuatso-09-15-26-25.jpg" width="50" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="TrangChu.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TinTuc/KetquaU23.html" target="_blank">Tin Thể Thao</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TinTuc/KetquaU23.html" target="_blank">Tin Nóng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TinTuc/ThoiTietHaNoi.html" target="_blank">Tin Thời Tiết</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TinTuc/ChayCayXang.html" target="_blank">Tin Thời Sự</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Thể loại</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="TinNong.html" target="_blank">Tin Nóng</a></li>
+                            <li><a class="dropdown-item" href="TinTheThao.html" target="_blank">Tin Thể Thao</a></li>
+                            <li><a class="dropdown-item" href="TinThoiTiet.html" target="_blank">Tin Thời Tiết</a></li>
+                            <li><a class="dropdown-item" href="TinThoiSu.html" target="_blank">Tin Thời Sự</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col">
+                    <h1>Dự báo thời tiết ngày 19/5: Miền Bắc trời dễ chịu, miền Trung mưa giông</h1>
+                    <p>Dự báo thời tiết ngày 19/5: Miền Bắc trời dễ chịu, miền Trung mưa giông<br><br>Theo Trung tâm Dự báo khí tượng thủy văn quốc gia, thời tiết hôm nay, khu vực từ Đà Nẵng đến Bình Thuận, Tây Nguyên và Nam Bộ có mưa rào và rải rác có giông,
+                        cục bộ có mưa to với lượng mưa khoảng 30-60mm/24h, có nơi trên 80mm/24h (mưa giông tập trung vào chiều và tối).
+                    </p>
+                    <br>
+                    <img src="../image/thời tiết hà nội.webp">
+                    <p>(Thời tiết Hà Nội hôm nay se lạnh vào sáng sớm. Ảnh: Phạm Hải)</p><br>
+                    <p>Trong mưa giông có khả năng xảy ra lốc, sét, mưa đá và gió giật mạnh. Nguy cơ xảy ra lũ quét, sạt lở đất tại khu vực vùng núi và ngập úng tại các khu vực trũng, thấp.
+                        <br><br>Khu vực Quảng Nam, Bình Định và Khánh Hòa có nguy cơ xảy ra lũ quét, sạt lở và ngập úng cục bộ.
+                        <br><br>Dự báo thời tiết các vùng trên cả nước ngày 19/5:
+                        <br><br><strong>Phía Tây Bắc Bộ</strong><br><br>Nhiều mây, có mưa rào và giông vài nơi, trưa chiều giảm mây hửng nắng. Gió nhẹ. Nhiệt độ thấp nhất 21-24 độ, có nơi dưới 21 độ. Nhiệt độ cao nhất 28-31 độ
+                        <br><br><strong>Phía Đông Bắc Bộ</strong><br><br>Nhiều mây, có mưa rào và giông vài nơi, trưa chiều giảm mây trời nắng. Gió đông đến đông nam cấp 2-3. Nhiệt độ thấp nhất 21-24 độ. Nhiệt độ cao nhất 28-31 độ<br><br><strong>Thanh Hóa - Thừa Thiên Huế</strong><br><br>Nhiều
+                        mây, có mưa rào và giông vài nơi, trưa chiều giảm mây trời nắng. Gió nhẹ. Nhiệt độ thấp nhất 21-24 độ. Nhiệt độ cao nhất 27-30 độ, có nơi trên 30 độ.<br><br><strong>Đà Nẵng đến Bình Thuận            </strong><br><br>Có mây, có
+                        mưa rào và giông vài nơi, riêng chiều tối và tối có mưa rào và giông rải rác, cục bộ có mưa vừa, mưa to. Gió nhẹ. Trong mưa giông có khả năng xảy ra lốc, sét, mưa đá và gió giật mạnh.
+                        <br><br>Nhiệt độ thấp nhất 23-26 độ. Nhiệt độ cao nhất 29-32 độ, có nơi trên 32 độ.
+                        <br><br><strong>Tây Nguyên</strong><br><br>Có mây, có mưa rào và giông vài nơi, riêng đêm nay và chiều tối mai có mưa rào và rải rác có dông, cục bộ có mưa vừa, mưa to. Gió nhẹ. Trong mưa giông có khả năng xảy ra lốc, sét, mưa
+                        đá và gió giật mạnh.
+                        <br><br>Nhiệt độ thấp nhất 20-23 độ. Nhiệt độ cao nhất 27-30 độ, có nơi trên 30 độ.
+                        <br><br><strong>Nam Bộ</strong><br><br>Có mây, có mưa rào và giông vài nơi, riêng chiều tối và tối mai có mưa rào và rải rác có dông, cục bộ có mưa vừa, mưa to. Gió nhẹ. Trong mưa giông có khả năng xảy ra lốc, sét, mưa đá và gió
+                        giật mạnh.
+                        <br><br>Nhiệt độ thấp nhất 24-27 độ. Nhiệt độ cao nhất 30-33 độ.
+                        <br><br><strong>Hà Nội
+                        </strong><br><br>Nhiều mây, có mưa vài nơi, trưa chiều giảm mây trời nắng. Gió đông đến đông nam cấp 2-3.
+                        <br><br>Nhiệt độ thấp nhất 22-24 độ. Nhiệt độ cao nhất 29-31 độ.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 bg-dark" style="color:white;">
+                <p> Nhóm 6 <br> Vòng Diệp - 2033210032 <br> Lý Tiến Đạt - 2033216386 <br> Nguyễn Hoàng Long - 2033210125</p>
+            </div>
+            <div class="col-md bg-dark" style="color:white;">
+                <p> Tổng biên tập: Nhóm 6<br> Tòa soạn: Phòng A209 Đại Học Hufi.<br> TP HCM Hotline: 3744 6767 - 3744 7676 <br>Email: info6@nhom6.com.vn<br> Liên hệ quảng cáo: 0912332128<br> Vui lòng dẫn nguồn khi bạn pháp hành lại thông tin từ website này.
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>
